@@ -26,4 +26,11 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
+
+    public Review(String body, LocalDateTime createdAt, LocalDateTime updated, Movie movie) {
+        this.body = body;
+        this.createdAt = createdAt;
+        this.updated = updated;
+        this.movie = movie;
+    }
 }
