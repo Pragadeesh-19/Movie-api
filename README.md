@@ -33,11 +33,11 @@ This is a RESTful API for Movie review system built with Spring Boot, providing 
 ## Getting Started
 
   ### 1. Clone the Repository
-    git clone https://github.com/yourusername/expense-tracker-api.git
-    cd expense-tracker-api
+    git clone https://github.com/yourusername/Movie-api.git
+    cd Movie-api
 
   ### 2. Configure Database
-    spring.datasource.url=jdbc:postgresql://localhost:5432/expensetracker
+    spring.datasource.url=jdbc:postgresql://localhost:5432/movieapi
     spring.datasource.username=your_db_username
     spring.datasource.password=your_db_password
     spring.jpa.hibernate.ddl-auto=update
