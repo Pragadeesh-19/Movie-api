@@ -26,6 +26,24 @@ This is a RESTful API for Movie review system built with Spring Boot, providing 
 
 ### Prerequisites
 
-- JDK 11 or later
+- JDK 17 or later
 - Maven
 - PostgreSQL
+
+## Getting Started
+
+  ### 1. Clone the Repository
+    git clone https://github.com/yourusername/expense-tracker-api.git
+    cd expense-tracker-api
+
+  ### 2. Configure Database
+    spring.datasource.url=jdbc:postgresql://localhost:5432/expensetracker
+    spring.datasource.username=your_db_username
+    spring.datasource.password=your_db_password
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+  ### 3. Build the project
+    mvn clean install
+
+  ### 4. Run the application
+    mvn spring-boot:run
