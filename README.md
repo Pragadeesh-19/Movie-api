@@ -1,49 +1,72 @@
 # Spring Boot Movies API
 
-This is a RESTful API for Movie review system built with Spring Boot, providing basic operations for managing movie reviews.
+This is a RESTful API for a movie review system built with Spring Boot. It allows for managing movie information and reviews.
 
 ## Features
 
-- List all the movies 
-- Retrieve a single movie by imdbId
-- Create new movies
-- write reviews for a movie with imdbId
+- **List All Movies**: Retrieve a list of all movies in the system.
+- **Retrieve Movie by IMDb ID**: Get details of a specific movie using its IMDb ID.
+- **Create New Movies**: Add new movies to the system with a unique IMDb ID.
+- **Write Reviews for Movies**: Submit reviews for a movie identified by its IMDb ID.
 
 ## API Endpoints
 
-- GET /api/v1/movies - List all movies
-- GET /api/v1/movies/create - create a movie with imdbId
-- POST /api/v1/movies/{imdbId} - Retrieve a movie with imdbId
-- POST /api/v1/movies/{imdbId}/review - create a review for a movie
+- **List All Movies**
+  - `GET /api/v1/movies` - Retrieve a list of all movies.
+- **Create New Movie**
+  - `POST /api/v1/movies/create` - Add a new movie with IMDb ID and other details.
+- **Retrieve Movie by IMDb ID**
+  - `GET /api/v1/movies/{imdbId}` - Retrieve a movie by its IMDb ID.
+- **Write Review for Movie**
+  - `POST /api/v1/movies/{imdbId}/review` - Submit a review for a movie using its IMDb ID.
 
 ## Technologies Used
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- PostgreSQL
-- Maven
+- **Java**: Programming language used for backend development.
+- **Spring Boot**: Framework for building the RESTful API.
+- **Spring Data JPA**: ORM framework for data access and persistence.
+- **PostgreSQL**: Database for storing movie and review data.
+- **Maven**: Build tool used for project management.
 
-### Prerequisites
+## Prerequisites
 
-- JDK 17 or later
-- Maven
-- PostgreSQL
+- **JDK 22**
+- **Maven**
+- **PostgreSQL**
 
-## Getting Started
+### Installation
 
-  ### 1. Clone the Repository
-    git clone https://github.com/yourusername/Movie-api.git
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/Pragadeesh-19/Movie-api.git
     cd Movie-api
+    ```
 
-  ### 2. Configure Database
+2. **Configure the Database**
+
+    Create a PostgreSQL database and update the `application.properties` file with your database credentials:
+
+    ```properties
     spring.datasource.url=jdbc:postgresql://localhost:5432/movieapi
-    spring.datasource.username=your_db_username
-    spring.datasource.password=your_db_password
-    spring.jpa.hibernate.ddl-auto=update
-    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-  ### 3. Build the project
-    mvn clean install
+    spring.datasource.username=your-username
+    spring.datasource.password=your-password
+    ```
 
-  ### 4. Run the application
+3. **Build and Run the Application:**
+
+    Using Maven:
+
+    ```bash
+    mvn clean install
     mvn spring-boot:run
+    ```
+
+
+### Testing
+
+Use Postman to test the API endpoints. Import the provided Postman collection (if available) for pre-defined tests.
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes or enhancements.
